@@ -11,7 +11,7 @@ namespace QuickSort
         //Array of integers to hold values
         private int[] arr = new int[20];
         private int cmp_count = 0; //number of comparasion
-        private int[] mov_count = 0; //number of data movements
+        private int mov_count = 0; //number of data movements
 
         //number of elements in array
         private int n;
@@ -43,7 +43,40 @@ namespace QuickSort
             }
         }
         //swaps the element at index x with the element at index y
+        void swap(int x, int y)
+        {
+            int temp;
 
+            temp = arr[x];
+            arr[x] = arr[y];
+            arr[y] = temp;
+        }
+        public void q_sort(int low, int high)
+        {
+            int pivot, i, j;
+            if (low > high)
+                return;
+
+            //partition the list into two parts:
+            //one containing elements less that or equal to pivot
+            //Outher conntaining elements greather than pivot
+
+            i = low + 1;
+            j = high;
+
+            pivot = arr[low];
+
+            while (i <= j)
+            {
+                //Search for an element grater than pivot
+                while ((arr[i] <= pivot) && (i <= high))
+                {
+                    i++;
+                    cmp_count++;
+                }
+                cmp_count++;
+            }
+        }
         static void Main(string[] args)
         {
         }
