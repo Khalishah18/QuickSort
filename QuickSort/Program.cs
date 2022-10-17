@@ -126,7 +126,8 @@ namespace QuickSort
         {
             //Declaring the object of the class
             Program myList = new Program();
-
+            //Accept array elements
+            myList.read();
         }
     }
 }
