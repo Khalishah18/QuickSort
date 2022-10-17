@@ -128,6 +128,10 @@ namespace QuickSort
             Program myList = new Program();
             //Accept array elements
             myList.read();
+            //Calling the sorting function
+            //Frist call to quick sort Alogrithm
+            myList.q_sort(0, myList.getSize() - 1);
+            
         }
     }
 }
